@@ -75,7 +75,7 @@ Objective-C, Swift를 다루는 한인택을 소개 합니다.
 
 ## [(주)H2Soft 2010.12 ~ 2012.02]
 ### 신한 iSmart 개발
-
+<img src="https://darkhani.github.io/Myself/shinhan.png" alt="shinhan" style="zoom:67%;" />
 - Objective-C
 - 뉴스 등 정보 일람 화면 제작 참여
 - App Store
@@ -101,7 +101,7 @@ Objective-C, Swift를 다루는 한인택을 소개 합니다.
     - 2012.12 [첫째 출생] 2020년 (현재) 초등2학년
     - 2014.10 [둘째 출생] 2020년 (현재) 유치원
     - 2018.11 [세째 출생] 2020년 (현재) 자가
-
+    
 ### ETC
 - 비트코인 자동 거래는 안되고, 가격 알아오개..
     - Raspberry3 + Python
