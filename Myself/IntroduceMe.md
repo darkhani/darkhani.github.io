@@ -5,7 +5,8 @@ Objective-C, Swift를 다루는 한인택을 소개 합니다.
 ## [(주) 기웅정보통신 2019.08 ~ 2020.03]
 
 - 나이스인포박스 라이브러리 유지보수
-- <img src="/Users/intaekhan/Documents/00.Programing/07.Github.io/darkhani.github.io/images/InfoBox.png" alt="InfoBox" style="zoom:67%;" />
+- <img src="https://darkhani.github.io/Myself/InfoBox.png" alt="InfoBox" style="zoom:67%;" />
+- 
 
 
 
