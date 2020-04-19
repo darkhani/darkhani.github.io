@@ -109,7 +109,8 @@ Objective-C, Swift를 다루는 한인택을 소개 합니다.
     - 영상 : <https://www.facebook.com/danny.han.12/videos/2543168355775817>
 - 내손의서당2 (안드로이드)
     - 천자문과 한자능력시험대비
-    - [![내손의서당2]()](https://www.youtube.com/watch?v=aFptDhXAqCg "내손의서당2")
+    - URL : <https://play.google.com/store/apps/details?id=com.tegine.chunjabasic&hl=ko>
+    - [![내손의서당2]()](https://www.youtube.com/watch?v=aFptDhXAqCg "내손의서당2 동작영상")
 - 스크래치 + 인베이더 
     - feat:Raspberry3
     - 영상 : <https://www.facebook.com/danny.han.12/videos/2619130018179650>
