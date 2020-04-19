@@ -107,6 +107,9 @@ Objective-C, Swift를 다루는 한인택을 소개 합니다.
     - Raspberry3 + Python
     - URL : <http://www.xn--lu5bw5ovud.com/2019/04/03/python-%EC%BD%94%EB%B9%97-api%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9E%90%EB%8F%99-%EA%B1%B0%EB%9E%98-%EC%A3%BC%EB%AC%B8%EB%84%A3%EA%B8%B0-%EC%9E%A5%EB%82%9C%EA%B0%90/>
     - 영상 : <https://www.facebook.com/danny.han.12/videos/2543168355775817>
+- 내손의서당2 (안드로이드)
+    - 천자문과 한자능력시험대비
+    - [![내손의서당2]()](https://www.youtube.com/watch?v=aFptDhXAqCg "내손의서당2")
 - 스크래치 + 인베이더 
     - feat:Raspberry3
     - 영상 : <https://www.facebook.com/danny.han.12/videos/2619130018179650>
