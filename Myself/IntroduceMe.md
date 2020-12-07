@@ -1,8 +1,14 @@
-# Danny *Han = [HanInTaek self];
+# Danny *Han = [HanInTaek shared];
 
 Objective-C, Swift를 다루는 한인택을 소개 합니다.
 
 ## Company *Intaek = [Company shared];
+## [(주) 이데아텍 2020.04 ~ ]
+### i-ONE PASS 통합인증 앱 개발 및 유지보수
+<img src="https://darkhani.github.io/Myself/InfoBox.png" alt="InfoBox" style="zoom:67%;" />
+
+### i-ONE PASS 통합인증 SDK 개발
+
 ## [(주) 기웅정보통신 2019.08 ~ 2020.03]
 
 ### 나이스인포박스 라이브러리 유지보수
