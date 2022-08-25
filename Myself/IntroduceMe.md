@@ -25,10 +25,6 @@ Objective-C, Swift를 다루는 한인택을 소개 합니다.
 
 <img src="https://darkhani.github.io/Myself/ionepass.png" alt="ionepass" style="zoom:67%;" />
 
-<img src="https://darkhani.github.io/Myself/ionepass.png" alt="ionepass" style="zoom:67%;" />
-
-<img src="https://darkhani.github.io/Myself/ionepass.png" alt="ionepass" style="zoom:67%;" />
-
 ### i-ONE PASS 통합인증 앱 & SDK 개발
 
 - 2차 인증, 간편 인증 어플
