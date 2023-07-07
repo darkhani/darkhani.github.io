@@ -6,12 +6,21 @@ Objective-C, Swift를 다루는 한인택을 소개 합니다.
 
 ## ===프리랜서 시작===
 
-## [교보증권 마이데이터 2022.01 ~ 2021.09]
-##앱스토어에 곧 올라갈 예정
+## [제주은행 제주지니 2022.10 ~ 2023.06]
+## 서비스 유지보수
+<img src="https://darkhani.github.io/Myself/jini.png" alt="jini" style="zoom:67%;" />
+
+## [제주은행 (구)모바일뱅킹 2022.10 ~ 2023.06]
+## 서비스 유지보수 및 앱 신규 개발에 따른 구앱 종료
+<img src="https://darkhani.github.io/Myself/jbank.png" alt="jini" style="zoom:67%;" />
+
+## [교보증권 마이데이터 끌 - 2022.01 ~ 2022.09]
+## SI 프로젝트 투입
+<img src="https://darkhani.github.io/Myself/kkl.png" alt="kyobo" style="zoom:67%;" />
 
 ## [롯데홈쇼핑 2021.09 ~ 2021.12]
 
-<img src="https://darkhani.github.io/Myself/lotteHomeshoping.png" alt="ionepass" style="zoom:67%;" />
+<img src="https://darkhani.github.io/Myself/lotteHomeshoping.png" alt="lotte" style="zoom:67%;" />
 
 ## ===정규직 끝... ===
 
@@ -143,9 +152,9 @@ Objective-C, Swift를 다루는 한인택을 소개 합니다.
 ### Wedding : 2012.03.
 
 - 딴 따다단...
-  - 2012.12 [첫째 출생] 2022년 (현재) 초등4학년
-  - 2014.10 [둘째 출생] 2022년 (현재) 초등2학년
-  - 2018.11 [세째 출생] 2022년 (현재) 어린이집
+  - 2012.12 [첫째 출생] 2023년 (현재) 초등5학년
+  - 2014.10 [둘째 출생] 2023년 (현재) 초등3학년
+  - 2018.11 [세째 출생] 2023년 (현재) 유치원
 
 ### ETC
 
