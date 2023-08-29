@@ -1,21 +1,31 @@
-# Danny *Han = [HanInTaek shared];
+# 한인택컴퍼니
 
-Objective-C, Swift를 다루는 한인택을 소개 합니다.
-
-## Company *Intaek = [Company shared];
+C++, Objective-C, Swift를 다루는 한인택을 소개 합니다.
 
 ## ===프리랜서 시작===
 
+## [EDS] 크레인 건설기계관리 임베디드 프로그램 제작 [2023.07]
+
+###Linux / RaspberryPi4 / QT /C++
+
+
+
 ## [제주은행 제주지니 2022.10 ~ 2023.06]
+
 ## 서비스 유지보수
+
 <img src="https://darkhani.github.io/Myself/jini.png" alt="jini" style="zoom:67%;" />
 
 ## [제주은행 (구)모바일뱅킹 2022.10 ~ 2023.06]
+
 ## 서비스 유지보수 및 앱 신규 개발에 따른 구앱 종료
+
 <img src="https://darkhani.github.io/Myself/jbank.png" alt="jbank" style="zoom:67%;" />
 
 ## [교보증권 마이데이터 끌 - 2022.01 ~ 2022.09]
+
 ## SI 프로젝트 투입
+
 <img src="https://darkhani.github.io/Myself/kkl.png" alt="kyobo" style="zoom:67%;" />
 
 ## [롯데홈쇼핑 2021.09 ~ 2021.12]
