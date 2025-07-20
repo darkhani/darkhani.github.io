@@ -1,317 +1,1085 @@
 <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="UTF-8">
-            <title>&equals;&equals;&equals;&#xd504;&#xb9ac;&#xb79c;&#xc11c; &#xc2dc;&#xc791;&equals;&equals;&equals;</title>
-            <style>
-/* From extension vscode.github */
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한인택 - 상세 이력서</title>
+    <meta name="description" content="C++, Objective-C, Swift를 다루는 iOS/Android 앱 개발자 한인택의 상세 이력서입니다.">
+    <meta name="keywords" content="iOS, Android, Swift, Objective-C, 앱개발, 모바일개발, 이력서">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-dark: #111827;
+            --border-color: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --info-color: #3b82f6;
+        }
 
-.vscode-dark img[src$=\#gh-light-mode-only],
-.vscode-light img[src$=\#gh-dark-mode-only] {
-	display: none;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-</style>
-            
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-<style>
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
-                font-size: 14px;
-                line-height: 1.6;
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .logo-section {
+            margin-bottom: 2rem;
+        }
+
+        .logo-image {
+            max-width: 200px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Navigation */
+        .nav {
+            background: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section:nth-child(even) {
+            background-color: var(--bg-secondary);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            position: relative;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 30px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid white;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 30px;
+            width: 0;
+            height: 0;
+            border-right: 10px solid white;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 4px solid white;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            left: calc(100% + 22px);
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -22px;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .timeline-company {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .timeline-role {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .timeline-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-features {
+            margin-top: 1rem;
+            padding-left: 1rem;
+        }
+
+        .timeline-features li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* Personal Info */
+        .personal-info {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .info-content h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--text-primary);
+        }
+
+        .info-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Skills */
+        .skills-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .skill-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
             }
-        </style>
-        <style>
-.task-list-item {
-    list-style-type: none;
-}
 
-.task-list-item-checkbox {
-    margin-left: -20px;
-    vertical-align: middle;
-    pointer-events: none;
-}
-</style>
-<style>
-:root {
-  --color-note: #0969da;
-  --color-tip: #1a7f37;
-  --color-warning: #9a6700;
-  --color-severe: #bc4c00;
-  --color-caution: #d1242f;
-  --color-important: #8250df;
-}
+            .nav-links {
+                display: none;
+            }
 
-</style>
-<style>
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-note: #2f81f7;
-    --color-tip: #3fb950;
-    --color-warning: #d29922;
-    --color-severe: #db6d28;
-    --color-caution: #f85149;
-    --color-important: #a371f7;
-  }
-}
+            .timeline::before {
+                left: 20px;
+            }
 
-</style>
-<style>
-.markdown-alert {
-  padding: 0.5rem 1rem;
-  margin-bottom: 16px;
-  color: inherit;
-  border-left: .25em solid #888;
-}
+            .timeline-item {
+                width: calc(100% - 40px);
+                left: 40px !important;
+            }
 
-.markdown-alert>:first-child {
-  margin-top: 0
-}
+            .timeline-dot {
+                left: -22px !important;
+            }
 
-.markdown-alert>:last-child {
-  margin-bottom: 0
-}
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -10px;
+                border-right: 10px solid white;
+                border-left: none;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+            }
 
-.markdown-alert .markdown-alert-title {
-  display: flex;
-  font-weight: 500;
-  align-items: center;
-  line-height: 1
-}
+            .section-title {
+                font-size: 2rem;
+            }
 
-.markdown-alert .markdown-alert-title .octicon {
-  margin-right: 0.5rem;
-  display: inline-block;
-  overflow: visible !important;
-  vertical-align: text-bottom;
-  fill: currentColor;
-}
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
 
-.markdown-alert.markdown-alert-note {
-  border-left-color: var(--color-note);
-}
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
-.markdown-alert.markdown-alert-note .markdown-alert-title {
-  color: var(--color-note);
-}
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.markdown-alert.markdown-alert-important {
-  border-left-color: var(--color-important);
-}
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
 
-.markdown-alert.markdown-alert-important .markdown-alert-title {
-  color: var(--color-important);
-}
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
 
-.markdown-alert.markdown-alert-warning {
-  border-left-color: var(--color-warning);
-}
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="https://darkhani.github.io/Myself/hitcom-logo.png" alt="Hitcom Logo" class="logo-image">
+                </div>
+                <h1>한인택 - 상세 이력서</h1>
+                <p>C++, Objective-C, Swift를 다루는 iOS/Android 앱 개발자</p>
+                <a href="../index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    메인 페이지로 돌아가기
+                </a>
+            </div>
+        </div>
+    </header>
 
-.markdown-alert.markdown-alert-warning .markdown-alert-title {
-  color: var(--color-warning);
-}
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h3>상세 이력서</h3>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#experience">경력사항</a></li>
+                    <li><a href="#personal">개인정보</a></li>
+                    <li><a href="#projects">프로젝트</a></li>
+                    <li><a href="#skills">기술스택</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-.markdown-alert.markdown-alert-tip {
-  border-left-color: var(--color-tip);
-}
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <!-- 프리랜서 시작 -->
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023년 - 현재</div>
+                        <div class="timeline-company">프리랜서 시작</div>
+                        <div class="timeline-role">iOS/Android 앱 개발 및 임베디드 시스템 개발</div>
+                        <div class="timeline-description">
+                            다양한 기업의 프로젝트에 참여하여 모바일 앱 개발과 임베디드 시스템 개발을 수행하고 있습니다.
+                        </div>
+                    </div>
+                </div>
 
-.markdown-alert.markdown-alert-tip .markdown-alert-title {
-  color: var(--color-tip);
-}
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023.09 - 2023.11</div>
+                        <div class="timeline-company">우리카드</div>
+                        <div class="timeline-role">Swift 앱 리뉴얼</div>
+                        <div class="timeline-description">
+                            기존 앱의 현대적인 UI/UX로 리뉴얼 작업을 진행했습니다.
+                        </div>
+                    </div>
+                </div>
 
-.markdown-alert.markdown-alert-caution {
-  border-left-color: var(--color-caution);
-}
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023.07</div>
+                        <div class="timeline-company">EDS</div>
+                        <div class="timeline-role">크레인 건설기계관리 임베디드 프로그램</div>
+                        <div class="timeline-description">
+                            Linux / RaspberryPi4 / Qt / C++ 기술을 활용한 임베디드 시스템 개발
+                        </div>
+                    </div>
+                </div>
 
-.markdown-alert.markdown-alert-caution .markdown-alert-title {
-  color: var(--color-caution);
-}
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022.10 - 2023.06</div>
+                        <div class="timeline-company">제주은행</div>
+                        <div class="timeline-role">제주지니 서비스 유지보수</div>
+                        <div class="timeline-description">
+                            모바일 뱅킹 서비스의 안정적인 운영과 기능 개선을 담당했습니다.
+                        </div>
+                        <img src="https://darkhani.github.io/Myself/jini.png" alt="제주지니" class="timeline-image">
+                    </div>
+                </div>
 
-</style>
-        
-        </head>
-        <body class="vscode-body vscode-light">
-            <img src="https://darkhani.github.io/Myself/hitcom-logo.png" alt="" style="zoom:67%;" />
-<p>C++, Objective-C, Swift를 다루는 한인택을 소개 합니다.</p>
-<h2 id="프리랜서-시작">===프리랜서 시작===</h2>
-<h2 id="우리카드-202309--202311">[우리카드 2023.09 ~ 2023.11]</h2>
-<h3 id="swift-앱리뉴얼">swift 앱리뉴얼</h3>
-<h2 id="eds-크레인-건설기계관리-임베디드-프로그램-제작-202307">[EDS] 크레인 건설기계관리 임베디드 프로그램 제작 [2023.07]</h2>
-<p>###Linux / RaspberryPi4 / QT /C++</p>
-<h2 id="제주은행-제주지니-202210--202306">[제주은행 제주지니 2022.10 ~ 2023.06]</h2>
-<h2 id="서비스-유지보수">서비스 유지보수</h2>
-<img src="https://darkhani.github.io/Myself/jini.png" alt="jini" style="zoom:67%;" />
-<h2 id="제주은행-구모바일뱅킹-202210--202306">[제주은행 (구)모바일뱅킹 2022.10 ~ 2023.06]</h2>
-<h2 id="서비스-유지보수-및-앱-신규-개발에-따른-구앱-종료">서비스 유지보수 및 앱 신규 개발에 따른 구앱 종료</h2>
-<img src="https://darkhani.github.io/Myself/jbank.png" alt="jbank" style="zoom:67%;" />
-<h2 id="교보증권-마이데이터-끌---202201--202209">[교보증권 마이데이터 끌 - 2022.01 ~ 2022.09]</h2>
-<h2 id="si-프로젝트-투입">SI 프로젝트 투입</h2>
-<img src="https://darkhani.github.io/Myself/kkl.png" alt="kyobo" style="zoom:67%;" />
-<h2 id="롯데홈쇼핑-202109--202112">[롯데홈쇼핑 2021.09 ~ 2021.12]</h2>
-<img src="https://darkhani.github.io/Myself/lotteHomeshoping.png" alt="lotte" style="zoom:67%;" />
-<h2 id="정규직-끝-">===정규직 끝... ===</h2>
-<h2 id="주-이누씨-202006--202108">[(주) 이누씨 2020.06 ~ 2021.08]</h2>
-<h3 id="freerdp라이브러리를-이용한-iphone용-remote-desktop-구현-skb-사내-프로젝트-납품">FreeRDP라이브러리를 이용한 iPhone용 Remote Desktop 구현 SKB 사내 프로젝트 납품</h3>
-<h2 id="주-이데아텍-202004--202106">[(주) 이데아텍 2020.04 ~ 2021.06]</h2>
-<h3 id="i-one-pass-통합인증-앱-개발-및-유지보수">i-ONE PASS 통합인증 앱 개발 및 유지보수</h3>
-<img src="https://darkhani.github.io/Myself/ionepass.png" alt="ionepass" style="zoom:67%;" />
-<h3 id="i-one-pass-통합인증-앱--sdk-개발">i-ONE PASS 통합인증 앱 &amp; SDK 개발</h3>
-<ul>
-<li>2차 인증, 간편 인증 어플
-<ul>
-<li>푸시기능 추가 (FCM)</li>
-<li>iPhoneX 대응</li>
-<li>App Store
-<ul>
-<li><a href="https://apps.apple.com/in/app/ionepass%ED%86%B5%ED%95%A9%EC%9D%B8%EC%A6%9D/id1526228740">https://apps.apple.com/in/app/ionepass통합인증/id1526228740</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="주-기웅정보통신-201908--202003">[(주) 기웅정보통신 2019.08 ~ 2020.03]</h2>
-<h3 id="나이스인포박스-라이브러리-유지보수">나이스인포박스 라이브러리 유지보수</h3>
-<img src="https://darkhani.github.io/Myself/InfoBox.png" alt="InfoBox" style="zoom:67%;" />
-- 라이브러리로 대고객 배포
-- Objective-C
-<h3 id="바로청구-ios앱-유지보수">바로청구 iOS앱 유지보수</h3>
-<img src="https://darkhani.github.io/Myself/baro.png" alt="baro" style="zoom:67%;" />
-- 보험청구 어플
-    - 푸시기능 추가 (FCM)
-    - WebPage와 Native의 Bridging 기능 적용 
-    - iPhoneX 대응
-    - Swift4
-- App Store
-    - <https://apps.apple.com/kr/app/%EC%8B%A4%EC%86%90%EB%B3%B4%ED%97%98-%EB%B0%94%EB%A1%9C%EC%B2%AD%EA%B5%AC/id1296713322>
-<h2 id="주-한패스-201802--201908">[(주) 한패스 2018.02 ~ 2019.08]</h2>
-<h3 id="한패스-외환송금앱-유지보수">한패스 외환송금앱 유지보수</h3>
-<img src="https://darkhani.github.io/Myself/hanpass.png" alt="baro" style="zoom:67%;" />
-- 소액 외화송금앱
-    - 푸시기능 추가 (FCM)
-    - 다국어 처리 및 Property관리
-    - Swipe Event 처리 기능 추가
-    - UI 개선
-    - Objective-C
-- App Store
-    - <https://apps.apple.com/kr/app/%ED%95%9C%ED%8C%A8%EC%8A%A4-%EA%B0%84%ED%8E%B8%ED%95%B4%EC%99%B8%EC%86%A1%EA%B8%88/id1344407760>
-<h2 id="주gpmobile-201705--201801">[(주)GPMobile) 2017.05 ~ 2018.01]</h2>
-<h3 id="lg-u-members-app-개발">LG U+ Members App 개발</h3>
-<img src="https://darkhani.github.io/Myself/lguplus.png" alt="lguplus" style="zoom:67%;" />
-- 멤버스 앱
-    - 메인화면 및 통신단 등 기반 로직 구현
-    - 소액결제 화면 구현 (바코드 처리 및 지갑 UI 처리)
-    - Swift3
-- App Store
-  - <https://apps.apple.com/kr/app/u-%EB%A9%A4%EB%B2%84%EC%8A%A4/id958811075>
-<h2 id="주미디어웹-201601--자회사-주에브리플레이-201705">[(주)미디어웹 2016.01 ~ 자회사 (주)에브리플레이 2017.05]</h2>
-<h3 id="겜튜브-개발-및-유지보수-미디어웹">겜튜브 개발 및 유지보수 [미디어웹]</h3>
-<img src="https://darkhani.github.io/Myself/gametube.png" alt="gametube" style="zoom:67%;" />
-- 겜튜브
-    - 영상 시청 어플
-    - Objective-C
-- App Store
-    - <https://apps.apple.com/us/app/%EA%B2%9C%ED%8A%9C%EB%B8%8C/id1090281841?l=ko>
-<h3 id="에브리핏-앱-개발-에브리플레이-201607-설립">에브리핏 앱 개발 [에브리플레이 2016.07 설립]</h3>
-<img src="https://darkhani.github.io/Myself/everyfit.png" alt="everyfit" style="zoom:67%;" />
-- 에브리핏
-    - 개발 리딩 경험
-    - 메인 및 통신단 HealthKit 사용 경험
-    - 내장DB SQLite 경험
-    - Swift 2 경험
-- App Store
-    - <https://apps.apple.com/kr/app/%EC%97%90%EB%B8%8C%EB%A6%AC%ED%95%8F-%EC%9A%B4%EB%8F%99-%EB%B7%B0%ED%8B%B0%EC%97%90-%EC%95%88%EC%8B%AC%EC%9D%84-%EB%8D%94%ED%95%98%EB%8B%A4/id1179617615>
-<h2 id="주웰시스템-201209--201510">[(주)웰시스템 2012.09 ~ 2015.10]</h2>
-<h3 id="ttssviewer-개발-및-유지보수">TTSSViewer 개발 및 유지보수</h3>
-<ul>
-<li>사내 앱이고, 스토어 배포 안된 앱</li>
-<li>Objective-C</li>
-<li>거래처인 토시바테크의 비밀문서시스템에서 PDF레퍼런스 뷰어 제작 및 유지보수
-<ul>
-<li>PDF관련 Library 경험</li>
-<li>내장DB SQLite 경험</li>
-</ul>
-</li>
-</ul>
-<h2 id="주h2soft-201012--201202">[(주)H2Soft 2010.12 ~ 2012.02]</h2>
-<h3 id="신한-ismart-개발">신한 iSmart 개발</h3>
-<img src="https://darkhani.github.io/Myself/shinhan.png" alt="shinhan" style="zoom:67%;" />
-- Objective-C
-- 뉴스 등 정보 일람 화면 제작 참여
-- App Store
-    - <https://apps.apple.com/kr/app/%EC%8B%A0%ED%95%9Ci-mobile/id772871884>
-<h2 id="myself-me--myself-shared">MySelf *me = [MySelf shared];</h2>
-<h3 id="birth--19840102">Birth : 1984.01.02</h3>
-<ul>
-<li>초등학교 4학년 말 286AT를 접합</li>
-<li>초등학교 6학년 586 (주로 Turbo-C, 고인돌을 즐김)
-<ul>
-<li>최정한님의 MDIR의 아류작인 삼돌툴즈를 중학교때 제작</li>
-</ul>
-</li>
-</ul>
-<h3 id="graduate--200502-인천전문대-세무회계과-38145">Graduate : 2005.02 [인천전문대 세무회계과 3.81/4.5]</h3>
-<ul>
-<li>이율은 높게, 세율은 낮게, 법은 평등하게...</li>
-</ul>
-<h3 id="충성-제대--201010-육군-포병-부사관-중사">충성! 제대 : 2010.10 [육군 포병 부사관 중사]</h3>
-<ul>
-<li>준비! 쏴!</li>
-</ul>
-<h3 id="graduate--201102-서울디지털대학교-컴퓨터공학과-소프트웨어-전공-40245">Graduate : 2011.02 [서울디지털대학교 컴퓨터공학과 소프트웨어 전공 4.02/4.5]</h3>
-<ul>
-<li>드뎌 제 길을 왔음.</li>
-</ul>
-<h3 id="wedding--201203">Wedding : 2012.03.</h3>
-<ul>
-<li>딴 따다단...
-<ul>
-<li>2012.12 [첫째 출생] 2023년 (현재) 초등5학년</li>
-<li>2014.10 [둘째 출생] 2023년 (현재) 초등3학년</li>
-<li>2018.11 [세째 출생] 2023년 (현재) 유치원</li>
-</ul>
-</li>
-</ul>
-<h3 id="etc">ETC</h3>
-<ul>
-<li>비트코인 자동 거래는 안되고, 가격 알아오개..
-<ul>
-<li>Raspberry3 + Python</li>
-<li>URL : <a href="http://www.xn--lu5bw5ovud.com/2019/04/03/python-%EC%BD%94%EB%B9%97-api%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9E%90%EB%8F%99-%EA%B1%B0%EB%9E%98-%EC%A3%BC%EB%AC%B8%EB%84%A3%EA%B8%B0-%EC%9E%A5%EB%82%9C%EA%B0%90/">http://www.한인택.com/2019/04/03/python-코빗-api를-이용한-자동-거래-주문넣기-장난감/</a></li>
-<li>영상 : <a href="https://www.facebook.com/danny.han.12/videos/2543168355775817">https://www.facebook.com/danny.han.12/videos/2543168355775817</a></li>
-</ul>
-</li>
-<li>내손의서당2 (안드로이드)
-<ul>
-<li>천자문과 한자능력시험대비</li>
-<li>URL : <a href="https://play.google.com/store/apps/details?id=com.tegine.chunjabasic&amp;hl=ko">https://play.google.com/store/apps/details?id=com.tegine.chunjabasic&amp;hl=ko</a></li>
-<li><a href="https://www.youtube.com/watch?v=aFptDhXAqCg" title="내손의서당2 동작영상"><img src="" alt="내손의서당2"></a></li>
-</ul>
-</li>
-<li>스크래치 + 인베이더
-<ul>
-<li>feat:Raspberry3</li>
-<li>영상 : <a href="https://www.facebook.com/danny.han.12/videos/2619130018179650">https://www.facebook.com/danny.han.12/videos/2619130018179650</a></li>
-</ul>
-</li>
-<li>아이폰6+ 배터리, 화면 갈기
-<ul>
-<li>이미지 : <a href="https://www.facebook.com/photo?fbid=2778946785531305&amp;set=a.104589319633745">https://www.facebook.com/photo?fbid=2778946785531305&amp;set=a.104589319633745</a></li>
-</ul>
-</li>
-<li>먹통되었던 갤럭시탭 2014 10.4 를 안드로이드 5.0으로 올림
-<ul>
-<li>계속 팝업 뜨는데, 다음 누르시면 롤리팝을 보실수 있습니다. ㅎㅎ</li>
-<li>영상 : <a href="https://www.facebook.com/100002480313876/videos/pcb.2548623401896979/2548577505234902/">https://www.facebook.com/100002480313876/videos/pcb.2548623401896979/2548577505234902/</a></li>
-</ul>
-</li>
-</ul>
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022.10 - 2023.06</div>
+                        <div class="timeline-company">제주은행 (구)모바일뱅킹</div>
+                        <div class="timeline-role">서비스 유지보수 및 앱 신규 개발에 따른 구앱 종료</div>
+                        <div class="timeline-description">
+                            기존 모바일 뱅킹 앱의 유지보수와 새로운 앱 개발로 인한 구앱 종료 작업을 수행했습니다.
+                        </div>
+                        <img src="https://darkhani.github.io/Myself/jbank.png" alt="제주은행 모바일뱅킹" class="timeline-image">
+                    </div>
+                </div>
 
-            
-            
-        </body>
-        </html>
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022.01 - 2022.09</div>
+                        <div class="timeline-company">교보증권</div>
+                        <div class="timeline-role">마이데이터 끌 - SI 프로젝트 투입</div>
+                        <div class="timeline-description">
+                            마이데이터 서비스 개발 및 시스템 통합 작업을 수행했습니다.
+                        </div>
+                        <img src="https://darkhani.github.io/Myself/kkl.png" alt="교보증권" class="timeline-image">
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021.09 - 2021.12</div>
+                        <div class="timeline-company">롯데홈쇼핑</div>
+                        <div class="timeline-role">모바일 앱 개발</div>
+                        <div class="timeline-description">
+                            쇼핑몰 앱의 사용자 경험 개선 및 새로운 기능 개발을 담당했습니다.
+                        </div>
+                        <img src="https://darkhani.github.io/Myself/lotteHomeshoping.png" alt="롯데홈쇼핑" class="timeline-image">
+                    </div>
+                </div>
+
+                <!-- 정규직 끝 -->
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020년 - 2021년</div>
+                        <div class="timeline-company">정규직 경력</div>
+                        <div class="timeline-role">다양한 기업에서의 정규직 경험</div>
+                        <div class="timeline-description">
+                            여러 기업에서 정규직으로 근무하며 다양한 프로젝트 경험을 쌓았습니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020.06 - 2021.08</div>
+                        <div class="timeline-company">(주) 이누씨</div>
+                        <div class="timeline-role">FreeRDP 라이브러리 활용 iPhone Remote Desktop</div>
+                        <div class="timeline-description">
+                            SKB 사내 프로젝트로 iPhone용 원격 데스크톱 앱을 개발했습니다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020.04 - 2021.06</div>
+                        <div class="timeline-company">(주) 이데아텍</div>
+                        <div class="timeline-role">i-ONE PASS 통합인증 앱 개발 및 유지보수</div>
+                        <div class="timeline-description">
+                            2차 인증, 간편 인증 앱 개발 및 SDK 개발을 담당했습니다.
+                        </div>
+                        <img src="https://darkhani.github.io/Myself/ionepass.png" alt="i-ONE PASS" class="timeline-image">
+                        <div class="timeline-features">
+                            <ul>
+                                <li>푸시기능 추가 (FCM)</li>
+                                <li>iPhoneX 대응</li>
+                                <li>App Store 출시</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019.08 - 2020.03</div>
+                        <div class="timeline-company">(주) 기웅정보통신</div>
+                        <div class="timeline-role">바로청구 iOS앱 유지보수</div>
+                        <div class="timeline-description">
+                            보험청구 앱의 푸시 기능 추가 및 iPhoneX 대응 작업을 수행했습니다.
+                        </div>
+                        <img src="https://darkhani.github.io/Myself/baro.png" alt="바로청구" class="timeline-image">
+                        <div class="timeline-features">
+                            <ul>
+                                <li>푸시기능 추가 (FCM)</li>
+                                <li>WebPage와 Native의 Bridging 기능 적용</li>
+                                <li>iPhoneX 대응</li>
+                                <li>Swift4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018.02 - 2019.08</div>
+                        <div class="timeline-company">(주) 한패스</div>
+                        <div class="timeline-role">한패스 외환송금앱 유지보수</div>
+                        <div class="timeline-description">
+                            소액 외화송금앱의 푸시 기능 추가 및 UI 개선 작업을 담당했습니다.
+                        </div>
+                        <img src="https://darkhani.github.io/Myself/hanpass.png" alt="한패스" class="timeline-image">
+                        <div class="timeline-features">
+                            <ul>
+                                <li>푸시기능 추가 (FCM)</li>
+                                <li>다국어 처리 및 Property관리</li>
+                                <li>Swipe Event 처리 기능 추가</li>
+                                <li>UI 개선</li>
+                                <li>Objective-C</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2017.05 - 2018.01</div>
+                        <div class="timeline-company">(주) GPMobile</div>
+                        <div class="timeline-role">LG U+ Members App 개발</div>
+                        <div class="timeline-description">
+                            멤버스 앱의 메인화면 및 통신단 기반 로직 구현을 담당했습니다.
+                        </div>
+                        <img src="https://darkhani.github.io/Myself/lguplus.png" alt="LG U+ Members" class="timeline-image">
+                        <div class="timeline-features">
+                            <ul>
+                                <li>메인화면 및 통신단 등 기반 로직 구현</li>
+                                <li>소액결제 화면 구현 (바코드 처리 및 지갑 UI 처리)</li>
+                                <li>Swift3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2016.01 - 2017.05</div>
+                        <div class="timeline-company">(주) 미디어웹 / (주) 에브리플레이</div>
+                        <div class="timeline-role">겜튜브, 에브리핏 앱 개발</div>
+                        <div class="timeline-description">
+                            영상 시청 앱과 운동 관리 앱의 개발 및 유지보수를 담당했습니다.
+                        </div>
+                        <img src="https://darkhani.github.io/Myself/gametube.png" alt="겜튜브" class="timeline-image">
+                        <img src="https://darkhani.github.io/Myself/everyfit.png" alt="에브리핏" class="timeline-image">
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2012.09 - 2015.10</div>
+                        <div class="timeline-company">(주) 웰시스템</div>
+                        <div class="timeline-role">TTSSViewer 개발 및 유지보수</div>
+                        <div class="timeline-description">
+                            사내 앱으로 거래처인 토시바테크의 비밀문서시스템에서 PDF레퍼런스 뷰어 제작 및 유지보수
+                        </div>
+                        <div class="timeline-features">
+                            <ul>
+                                <li>PDF관련 Library 경험</li>
+                                <li>내장DB SQLite 경험</li>
+                                <li>Objective-C</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2010.12 - 2012.02</div>
+                        <div class="timeline-company">(주) H2Soft</div>
+                        <div class="timeline-role">신한 iSmart 개발</div>
+                        <div class="timeline-description">
+                            뉴스 등 정보 일람 화면 제작에 참여했습니다.
+                        </div>
+                        <img src="https://darkhani.github.io/Myself/shinhan.png" alt="신한 iSmart" class="timeline-image">
+                        <div class="timeline-features">
+                            <ul>
+                                <li>Objective-C</li>
+                                <li>뉴스 등 정보 일람 화면 제작 참여</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Info Section -->
+    <section id="personal" class="section">
+        <div class="container">
+            <h2 class="section-title">Personal Information</h2>
+            <div class="personal-info">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>생년월일</h4>
+                            <p>1984년 1월 2일</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>학력</h4>
+                            <p>서울디지털대학교 컴퓨터공학과 소프트웨어 전공 (4.02/4.5)</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-military"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>군복무</h4>
+                            <p>육군 포병 부사관 중사 (2010년 10월 제대)</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>가족사항</h4>
+                            <p>2012년 3월 결혼, 자녀 3명</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card scroll-reveal">
+                    <img src="https://darkhani.github.io/Myself/ionepass.png" alt="i-ONE PASS" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">i-ONE PASS 통합인증</h3>
+                        <p class="project-description">2차 인증, 간편 인증 앱으로 FCM 푸시 기능과 iPhoneX 대응을 포함한 완성도 높은 앱입니다.</p>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/in/app/ionepass%ED%86%B5%ED%95%A9%EC%9D%B8%EC%A6%9D/id1526228740" class="project-link" target="_blank">
+                                <i class="fab fa-apple"></i>
+                                App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal">
+                    <img src="https://darkhani.github.io/Myself/baro.png" alt="바로청구" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">바로청구 iOS앱</h3>
+                        <p class="project-description">보험청구 앱으로 WebPage와 Native의 Bridging 기능을 적용한 혁신적인 앱입니다.</p>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/kr/app/%EC%8B%A4%EC%86%90%EB%B3%B4%ED%97%98-%EB%B0%94%EB%A1%9C%EC%B2%AD%EA%B5%AC/id1296713322" class="project-link" target="_blank">
+                                <i class="fab fa-apple"></i>
+                                App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal">
+                    <img src="https://darkhani.github.io/Myself/hanpass.png" alt="한패스" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">한패스 외환송금앱</h3>
+                        <p class="project-description">소액 외화송금앱으로 다국어 처리, Property 관리, Swipe Event 처리 기능을 포함합니다.</p>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/kr/app/%ED%95%9C%ED%8C%A8%EC%8A%A4-%EA%B0%84%ED%8E%B8%ED%95%B4%EC%99%B8%EC%86%A1%EA%B8%88/id1344407760" class="project-link" target="_blank">
+                                <i class="fab fa-apple"></i>
+                                App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal">
+                    <img src="https://darkhani.github.io/Myself/lguplus.png" alt="LG U+ Members" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">LG U+ Members App</h3>
+                        <p class="project-description">멤버스 앱으로 메인화면, 통신단 기반 로직 구현과 소액결제 화면을 개발했습니다.</p>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/kr/app/u-%EB%A9%A4%EB%B2%84%EC%8A%A4/id958811075" class="project-link" target="_blank">
+                                <i class="fab fa-apple"></i>
+                                App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal">
+                    <img src="https://darkhani.github.io/Myself/gametube.png" alt="겜튜브" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">겜튜브</h3>
+                        <p class="project-description">영상 시청 앱으로 사용자 친화적인 인터페이스와 안정적인 영상 재생 기능을 제공합니다.</p>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/us/app/%EA%B2%9C%ED%8A%9C%EB%B8%8C/id1090281841?l=ko" class="project-link" target="_blank">
+                                <i class="fab fa-apple"></i>
+                                App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal">
+                    <img src="https://darkhani.github.io/Myself/everyfit.png" alt="에브리핏" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">에브리핏</h3>
+                        <p class="project-description">운동 관리 앱으로 HealthKit 사용 경험과 SQLite 내장DB를 활용한 완성도 높은 앱입니다.</p>
+                        <div class="project-links">
+                            <a href="https://apps.apple.com/kr/app/%EC%97%90%EB%B8%8C%EB%A6%AC%ED%95%8F-%EC%9A%B4%EB%8F%99-%EB%B7%B0%ED%8B%B0%EC%97%90-%EC%95%88%EC%8B%AC%EC%9D%84-%EB%8D%94%ED%95%98%EB%8B%A4/id1179617615" class="project-link" target="_blank">
+                                <i class="fab fa-apple"></i>
+                                App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-section">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-mobile-alt"></i> 모바일 개발</h4>
+                        <ul class="skill-list">
+                            <li>Swift (Swift2, Swift3, Swift4)</li>
+                            <li>Objective-C</li>
+                            <li>iOS 앱 개발</li>
+                            <li>Android 앱 개발</li>
+                            <li>HealthKit</li>
+                            <li>FCM (Firebase Cloud Messaging)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code"></i> 프로그래밍 언어</h4>
+                        <ul class="skill-list">
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>SQLite</li>
+                            <li>WebView Bridging</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-microchip"></i> 임베디드 시스템</h4>
+                        <ul class="skill-list">
+                            <li>Linux</li>
+                            <li>Raspberry Pi</li>
+                            <li>Qt Framework</li>
+                            <li>FreeRDP</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-tools"></i> 개발 도구</h4>
+                        <ul class="skill-list">
+                            <li>Xcode</li>
+                            <li>Android Studio</li>
+                            <li>Git</li>
+                            <li>App Store 배포</li>
+                            <li>PDF Library</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add fade-in animation to sections
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Active navigation highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
