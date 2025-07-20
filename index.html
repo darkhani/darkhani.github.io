@@ -1,50 +1,884 @@
 <!DOCTYPE html>
-<HTML>
-<HEAD>
-<TITLE>Intex World! New 2018</TITLE>
-</HEAD>
-<CENTER>
-<BODY BGCOLOR="FFFFFF">
-	
-<HR>
-<H1>[iPhone & Android App Developer!!]</H1>
-<P> Android App</br>
-<P> <HR><B>애이름이...[2018.01.01 04:50] V0.00.001</B>
-	<div class="emptybody">
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한인택 - iOS/Android 개발자 포트폴리오</title>
+    <meta name="description" content="C++, Objective-C, Swift를 다루는 iOS/Android 앱 개발자 한인택의 포트폴리오입니다.">
+    <meta name="keywords" content="iOS, Android, Swift, Objective-C, 앱개발, 모바일개발, 포트폴리오">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-dark: #111827;
+            --border-color: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
 
-	    <span class="fixedText">  <a href="http://www.tegine.com/common/airumi.apk"><IMG SRC="./images/airumi.png" ALIGN="BOTTOM"></a> </span>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	</div>
-<BR> <B><I><a href="http://www.tegine.com/common/airumi.apk">Download Here!!!</a></I></B>
-<P> <HR><B>내손의 서당</B>
-	<div class="emptybody">
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
 
-	    <span class="fixedText">  <a href="https://play.google.com/store/apps/details?id=com.tegine.chunjabasic"><IMG SRC="./images/myhandchunja.png" ALIGN="BOTTOM"></a> </span>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-	</div>
-	
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
 
-<BR> <B><I><a href="https://play.google.com/store/apps/details?id=com.tegine.chunjabasic">Download Here!!! [google play]</a></I></B>
-	<HR><BR></br></br>작은리본 </br>[제 홈피에는 2015/04/17] 에 달았습니다. 늦었습니다. 잊지않겠습니다. 기억합니다.</br>
-		<!--https://youtu.be/t1PZhlIVicI-->
-		<video width="500" height="400" controls>
-		  <source src="./4mp/yellow-ribon.mp4" type="video/mp4">
-		  Your browser does not support the video tag.
-		</video>
-		</br>등급보류? 등급을 매길수 없는 곡이닷!!! </br>
-	<HR>
-		<P> <B>Think!!! and Do not forget this.</B></br></br>
-		<a href="http://sewolho416.org"><IMG SRC="./images/yellow-ribon.png" ALIGN="BOTTOM"></a> 
-<HR>	
-	<P> <B>My Other site!!!</B></br></br>
-	<a href="http://www.tegine.com">Go! Tegine.COM</a></br>
-	<a href="http://www.한인택.com">Go! 한인택.COM</a></br>
-<HR>	
-	<H2>Intex!!!</H2></br>
-	Send me mail at <a href="mailto:dandyhani2010@gmail.com">
-	dandyhani2010@gmail.com</a>
-<HR>
-(C)Copyleft 2015~ darkhani's home... with github.com
-</BODY>
-</CENTER>
-</HTML>
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 0 auto 1rem;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Navigation */
+        .nav {
+            background: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section:nth-child(even) {
+            background-color: var(--bg-secondary);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Experience */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid white;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-right: 10px solid white;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            width: 16px;
+            height: 16px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 3px solid white;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            left: calc(100% + 22px);
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -22px;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-role {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .contact-text {
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 40px);
+                left: 40px !important;
+            }
+
+            .timeline-dot {
+                left: -22px !important;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -10px;
+                border-right: 10px solid white;
+                border-left: none;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-image">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h1>한인택</h1>
+                <p>iOS/Android 앱 개발자</p>
+                <p>C++, Objective-C, Swift를 다루는 모바일 앱 개발 전문가</p>
+                <div class="social-links">
+                    <a href="mailto:dandyhani2010@gmail.com" title="이메일"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/darkhani" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="http://www.tegine.com" title="Tegine"><i class="fas fa-globe"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h3>한인택</h3>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">소개</a></li>
+                    <li><a href="#experience">경력</a></li>
+                    <li><a href="#projects">프로젝트</a></li>
+                    <li><a href="#contact">연락처</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>모바일 앱 개발 전문가</h3>
+                    <p>1984년생으로 10년 이상의 모바일 앱 개발 경험을 보유하고 있습니다. iOS와 Android 플랫폼에서 다양한 앱을 개발하고 유지보수한 경험이 있습니다.</p>
+                    <p>주요 기술 스택으로는 Swift, Objective-C, C++를 다루며, 특히 iOS 앱 개발에 전문성을 가지고 있습니다. 다양한 기업의 프로젝트에 참여하여 실무 경험을 쌓았습니다.</p>
+                    <div class="skills">
+                        <span class="skill-tag">Swift</span>
+                        <span class="skill-tag">Objective-C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">iOS</span>
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">Qt</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>주요 경력</h3>
+                    <ul>
+                        <li>우리카드, 제주은행, 교보증권 등 금융권 앱 개발</li>
+                        <li>LG U+, 한패스 등 대기업 모바일 서비스 개발</li>
+                        <li>임베디드 시스템 개발 (크레인 건설기계관리)</li>
+                        <li>다수의 App Store 출시 앱 개발</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023.09 - 2023.11</div>
+                        <div class="timeline-company">우리카드</div>
+                        <div class="timeline-role">Swift 앱 리뉴얼</div>
+                        <div class="timeline-description">기존 앱의 현대적인 UI/UX로 리뉴얼 작업을 진행했습니다.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023.07</div>
+                        <div class="timeline-company">EDS</div>
+                        <div class="timeline-role">크레인 건설기계관리 임베디드 프로그램</div>
+                        <div class="timeline-description">Linux / RaspberryPi4 / Qt / C++ 기술을 활용한 임베디드 시스템 개발</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022.10 - 2023.06</div>
+                        <div class="timeline-company">제주은행</div>
+                        <div class="timeline-role">제주지니 서비스 유지보수</div>
+                        <div class="timeline-description">모바일 뱅킹 서비스의 안정적인 운영과 기능 개선을 담당했습니다.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022.01 - 2022.09</div>
+                        <div class="timeline-company">교보증권</div>
+                        <div class="timeline-role">마이데이터 SI 프로젝트</div>
+                        <div class="timeline-description">마이데이터 서비스 개발 및 시스템 통합 작업을 수행했습니다.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021.09 - 2021.12</div>
+                        <div class="timeline-company">롯데홈쇼핑</div>
+                        <div class="timeline-role">모바일 앱 개발</div>
+                        <div class="timeline-description">쇼핑몰 앱의 사용자 경험 개선 및 새로운 기능 개발을 담당했습니다.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020.06 - 2021.08</div>
+                        <div class="timeline-company">(주) 이누씨</div>
+                        <div class="timeline-role">FreeRDP 라이브러리 활용 iPhone Remote Desktop</div>
+                        <div class="timeline-description">SKB 사내 프로젝트로 iPhone용 원격 데스크톱 앱을 개발했습니다.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020.04 - 2021.06</div>
+                        <div class="timeline-company">(주) 이데아텍</div>
+                        <div class="timeline-role">i-ONE PASS 통합인증 앱 개발</div>
+                        <div class="timeline-description">2차 인증, 간편 인증 앱 개발 및 SDK 개발을 담당했습니다.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019.08 - 2020.03</div>
+                        <div class="timeline-company">(주) 기웅정보통신</div>
+                        <div class="timeline-role">바로청구 iOS앱 유지보수</div>
+                        <div class="timeline-description">보험청구 앱의 푸시 기능 추가 및 iPhoneX 대응 작업을 수행했습니다.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018.02 - 2019.08</div>
+                        <div class="timeline-company">(주) 한패스</div>
+                        <div class="timeline-role">한패스 외환송금앱 유지보수</div>
+                        <div class="timeline-description">소액 외화송금앱의 푸시 기능 추가 및 UI 개선 작업을 담당했습니다.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2017.05 - 2018.01</div>
+                        <div class="timeline-company">(주) GPMobile</div>
+                        <div class="timeline-role">LG U+ Members App 개발</div>
+                        <div class="timeline-description">멤버스 앱의 메인화면 및 통신단 기반 로직 구현을 담당했습니다.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2016.01 - 2017.05</div>
+                        <div class="timeline-company">(주) 미디어웹 / (주) 에브리플레이</div>
+                        <div class="timeline-role">겜튜브, 에브리핏 앱 개발</div>
+                        <div class="timeline-description">영상 시청 앱과 운동 관리 앱의 개발 및 유지보수를 담당했습니다.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">i-ONE PASS 통합인증</h3>
+                        <p class="project-description">2차 인증, 간편 인증 앱으로 FCM 푸시 기능과 iPhoneX 대응을 포함한 완성도 높은 앱입니다.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">FCM</span>
+                            <span class="tech-tag">iPhoneX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">바로청구 iOS앱</h3>
+                        <p class="project-description">보험청구 앱으로 WebPage와 Native의 Bridging 기능을 적용한 혁신적인 앱입니다.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Swift4</span>
+                            <span class="tech-tag">WebView</span>
+                            <span class="tech-tag">FCM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">한패스 외환송금앱</h3>
+                        <p class="project-description">소액 외화송금앱으로 다국어 처리, Property 관리, Swipe Event 처리 기능을 포함합니다.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Objective-C</span>
+                            <span class="tech-tag">다국어</span>
+                            <span class="tech-tag">FCM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">LG U+ Members App</h3>
+                        <p class="project-description">멤버스 앱으로 메인화면, 통신단 기반 로직 구현과 소액결제 화면을 개발했습니다.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Swift3</span>
+                            <span class="tech-tag">바코드</span>
+                            <span class="tech-tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">겜튜브</h3>
+                        <p class="project-description">영상 시청 앱으로 사용자 친화적인 인터페이스와 안정적인 영상 재생 기능을 제공합니다.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Objective-C</span>
+                            <span class="tech-tag">영상재생</span>
+                            <span class="tech-tag">UI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card scroll-reveal">
+                    <div class="project-image">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">에브리핏</h3>
+                        <p class="project-description">운동 관리 앱으로 HealthKit 사용 경험과 SQLite 내장DB를 활용한 완성도 높은 앱입니다.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Swift2</span>
+                            <span class="tech-tag">HealthKit</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <p class="section-subtitle">프로젝트나 협업에 관심이 있으시다면 언제든 연락주세요.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">dandyhani2010@gmail.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-text">github.com/darkhani</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-text">tegine.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 한인택. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add fade-in animation to sections
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Active navigation highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
